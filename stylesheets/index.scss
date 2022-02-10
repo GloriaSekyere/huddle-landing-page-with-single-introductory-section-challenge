@@ -48,6 +48,7 @@ body {
       }
     }
     p {
+      color: #e0d4f1;
       margin-bottom: 30px;
       font-family: "Open Sans";
       line-height: 1.6;
@@ -79,5 +80,82 @@ body {
   }
   svg {
     fill:#ffffff;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    padding: 5%; //modified
+    height: 100vh;
+    background: {
+      image: url("../images/bg-desktop.svg"); //modified
+      size: cover; //added
+    }
+  }
+  
+  .header {
+    width: 200px; //modified
+  }
+  
+  .main {
+    display: flex; //added
+    justify-content: space-between; //added
+    margin: 75px 0 0; //added
+
+    &-illustration {
+      width: 0; //modified
+      flex-basis: 60%; //added
+      margin: 0 0; //modified
+    }
+  
+    &-content {
+      display: flex; //added
+      align-items: center; //added
+      flex-basis: 40%; //added
+      text-align: left; //modified
+      margin-bottom: 0; //modified
+
+      h1 {
+        margin-bottom: 20px; //modified
+        font: {
+          size: 40px; //modified
+        }
+      }
+
+      p {
+        font-size: 17px; //added
+      }
+
+      button {
+        width: 40%; //modified
+        padding: 20px 0; //modified
+        font-size: 18px; //added
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5); //modified
+        &:hover { //added
+          color: #ffffff;
+          background-color: $soft-magenta;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+  .footer {
+    position: absolute; //added
+    right: 5%; //added
+    bottom: 5%; //added
+    width: 150px; //modified
+    margin: 0; //modified
+
+    a {
+      width: 40px; //modified
+      height: 40px; //modified
+      &:hover { //added
+        border: 1px solid $soft-magenta;
+        svg {
+          fill: $soft-magenta;
+        }
+      }
+    }
   }
 }
