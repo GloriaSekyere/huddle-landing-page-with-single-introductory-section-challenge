@@ -94,6 +94,7 @@ body {
     padding: 5%;
     height: 100vh;
     background-image: url("../images/bg-desktop.svg");
+    background-size: 100vw 100vh;
   }
   .header {
     width: 200px;
